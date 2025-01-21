@@ -1,0 +1,188 @@
+@import url('https://fonts.googleapis.com/css2?family=Varela+Round&display=swap');
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem;
+  background-color: white;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+}
+
+.navbar > * {
+  max-width: 1200px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 0 2rem;
+}
+
+.navbar-brand {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.navbar-logo {
+  width: 50px;
+  height: auto;
+}
+
+.brand-text {
+  display: flex;
+  flex-direction: column;
+  font-family: 'Varela Round', system-ui, sans-serif;
+}
+
+.brand-text h1 {
+  font-size: 1.2rem;
+  margin: 0;
+  color: #333;
+  font-family: 'Varela Round', system-ui, sans-serif;
+}
+
+.brand-text p {
+  font-size: 0.8rem;
+  margin: 0;
+  color: #666;
+  font-family: 'Varela Round', system-ui, sans-serif;
+}
+
+.nav-links {
+  display: flex;
+  gap: 1.5rem;
+  align-items: center;
+  transition: all 0.3s ease;
+  padding-left: 250px;
+}
+
+.nav-links.open {
+  display: block;
+  position: absolute;
+  top: 60px;
+  left: 0;
+  right: 0;
+  background-color: white;
+  flex-direction: column;
+  padding: 1rem;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+  z-index: 999;
+}
+
+.nav-link {
+  text-decoration: none;
+  color: #333;
+  font-size: 1rem;
+  padding: 0.5rem;
+  transition: color 0.3s ease;
+  cursor: pointer;
+  border: none;
+  background: none;
+  font-family: 'Varela Round', system-ui, sans-serif;
+}
+
+.nav-link:hover {
+  color: #e65100;
+}
+
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.dropdown-content {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background-color: white;
+  min-width: 250px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  border-radius: 4px;
+  padding: 0;
+  z-index: 1;
+}
+
+.dropdown-content a {
+  color: #666;
+  padding: 1rem;
+  text-decoration: none;
+  display: block;
+  transition: all 0.3s ease;
+  border-bottom: 1px solid #eee;
+  font-family: 'Varela Round', system-ui, sans-serif;
+  font-size: 0.95rem;
+}
+
+.dropdown-content a:last-child {
+  border-bottom: none;
+}
+
+.dropdown-content a:hover {
+  background-color: #f8f8f8;
+  color: #333;
+}
+
+/* Hamburger Icon */
+.hamburger {
+  display: none;
+  flex-direction: column;
+  gap: 5px;
+  cursor: pointer;
+}
+
+.hamburger .bar {
+  width: 25px;
+  height: 3px;
+  background-color: #333;
+  border-radius: 2px;
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+  .navbar {
+    flex-direction: column;
+    padding: 1rem;
+  }
+
+  .nav-links {
+    display: none;
+  }
+
+  .nav-links.open {
+    display: flex;
+  }
+
+  .dropdown-content {
+    position: static;
+    box-shadow: none;
+    padding: 0;
+  }
+
+  .hamburger {
+    display: flex;
+    align-items: center;
+    padding-top: 10px;
+  }
+}
+
+@media (max-width: 768px) {
+  .brand-text h1 {
+    font-size: 1rem;
+  }
+
+  .brand-text p {
+    font-size: 0.7rem;
+  }
+
+  .nav-links {
+    gap: 1rem;
+  }
+
+  .nav-link {
+    font-size: 0.9rem;
+  }
+}

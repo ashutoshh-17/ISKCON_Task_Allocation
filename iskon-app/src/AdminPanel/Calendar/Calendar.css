@@ -1,0 +1,262 @@
+.main123 {
+  display: flex;
+}
+
+.calendar-dashboard {
+    padding: 20px;
+    height: calc(100vh - 64px);
+    width: 100%;
+    background-color: #f5f5f5;
+    overflow-y: auto;
+    margin-top: 175px;
+  }
+  
+  .calendar-container {
+    display: flex;
+    gap: 20px;
+    max-width: 1400px;
+    margin: 0 auto;
+    background: white;
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+  
+  .main-calendar {
+    flex: 1;
+  }
+  
+  .calendar-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+  }
+  
+  .calendar-header button {
+    background: none;
+    border: none;
+    font-size: 20px;
+    cursor: pointer;
+    padding: 5px 10px;
+  }
+  
+  .calendar-grid {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    gap: 1px;
+    background-color: #e0e0e0;
+    border: 1px solid #e0e0e0;
+  }
+  
+  .calendar-day-header {
+    background: white;
+    padding: 10px;
+    text-align: center;
+    font-weight: 500;
+  }
+  
+  .calendar-day {
+    background: white;
+    min-height: 120px;
+    padding: 10px;
+    cursor: pointer;
+    position: relative;
+  }
+  
+  .calendar-day:hover {
+    background: #f5f5f5;
+  }
+  
+  .calendar-day.other-month {
+    color: #999;
+  }
+  
+  .calendar-day.selected {
+    background: #f0f7ff;
+  }
+  
+  .day-number {
+    font-size: 14px;
+    font-weight: 500;
+  }
+  
+  .day-events {
+    margin-top: 5px;
+  }
+  
+  .event {
+    background: #f0f0f0;
+    padding: 5px;
+    margin: 2px 0;
+    font-size: 12px;
+    border-radius: 4px;
+  }
+  
+  .calendar-sidebar {
+    width: 300px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+  
+  .mini-calendar {
+    background: #f8f8f8;
+    padding: 15px;
+    border-radius: 8px;
+  }
+  
+  .mini-calendar-header {
+    text-align: center;
+    margin-bottom: 10px;
+  }
+  
+  .mini-calendar-grid {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    gap: 2px;
+  }
+  
+  .mini-calendar-day-header {
+    text-align: center;
+    font-size: 12px;
+    padding: 5px;
+    color: #666;
+  }
+  
+  .mini-calendar-day {
+    aspect-ratio: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 12px;
+    cursor: pointer;
+    border-radius: 50%;
+  }
+  
+  .mini-calendar-day:hover:not(.empty) {
+    background: #e0e0e0;
+  }
+  
+  .mini-calendar-day.selected {
+    background: #2D8B86;
+    color: white;
+  }
+  
+  .mini-calendar-day.empty {
+    cursor: default;
+  }
+  
+  .day-details {
+    background: #f8f8f8;
+    padding: 20px;
+    border-radius: 8px;
+    
+  }
+  
+  .day-details h3 {
+    margin: 0 0 15px 0;
+  }
+  
+  .no-events {
+    text-align: center;
+  }
+  
+  .lotus-icon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;  /* Ensures the container takes up full width */
+    margin: 20px 0; /* Adds space above and below the image */
+  }
+  
+  .lotus-icon img {
+    width: 220px;
+    height: 100px;
+    object-fit: contain; /* Ensures the image maintains its aspect ratio */
+    display: block;  /* Ensures the image is treated as a block-level element */
+    margin: 0 auto;  /* Centers the image horizontally */
+  }
+  
+  
+  .lotus {
+    fill: #ffd700;
+  }
+  
+  .assign-service {
+    background-color: #2D8B86;  /* Teal color */
+    color: white;  /* Text color */
+    border: none;  /* Remove border */
+    padding: 12px 20px;  /* Add padding for a better size */
+    font-size: 16px;  /* Set font size */
+    border-radius: 8px;  /* Rounded corners */
+    cursor: pointer;  /* Pointer cursor on hover */
+    font-weight: bold;  /* Bold text */
+    text-decoration: none;  /* Ensure no underline */
+    transition: background-color 0.3s ease, transform 0.2s ease;  /* Smooth hover effects */
+  }
+
+  .assign-service:hover {
+    background-color: #1E6A5C;  /* Darker teal on hover */
+    transform: scale(1.05);  /* Slightly enlarge button on hover */
+  }
+  
+  .assign-service:focus {
+    outline: none;  /* Remove default focus outline */
+    box-shadow: 0 0 5px rgba(45, 139, 134, 0.8);  /* Add custom focus box-shadow */
+  }
+  
+  
+  .events-list {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+  
+  .event-item {
+    display: flex;
+    gap: 10px;
+    padding: 10px;
+    background: white;
+    border-radius: 4px;
+  }
+  
+  .event-time {
+    color: #666;
+    font-size: 14px;
+  }
+  
+  .event-title {
+    font-weight: 500;
+  }
+  
+  @media (max-width: 1024px) {
+    .calendar-container {
+      flex-direction: column;
+    }
+    
+    .calendar-sidebar {
+      width: 100%;
+    }
+    
+    .calendar-day {
+      min-height: 100px;
+    }
+  }
+  
+  @media (max-width: 768px) {
+    .calendar-dashboard {
+      margin-left: 0;
+      padding: 10px;
+    }
+    
+    .calendar-day-header {
+      padding: 5px;
+      font-size: 14px;
+    }
+    
+    .calendar-day {
+      min-height: 80px;
+      padding: 5px;
+    }
+  }

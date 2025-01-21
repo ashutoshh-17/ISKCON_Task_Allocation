@@ -1,0 +1,161 @@
+/* General Styles */
+body {
+  font-family: 'Varela Round', sans-serif;
+  background: url('../Assets/background-1.png') center/20% repeat,
+              linear-gradient(to right, #fff9f5, #fff);
+  margin: 0;
+  padding: 0;
+  min-height: 100vh;
+}
+
+/* Container */
+.container-ser {
+  max-width: 1200px;
+  margin: auto;
+  padding-bottom: 100px;
+}
+
+/* Video Container */
+.video-container {
+  display: flex;
+  justify-content: center;
+  margin: 40px 0;
+  padding: 20px;
+  background-color: rgba(255, 255, 255, 0.8);
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.video-container iframe {
+  max-width: 100%;
+  border-radius: 8px;
+  box-shadow: 5px 5px 15px 5px pink;
+}
+
+/* Service Area */
+.service-area {
+  text-align: center;
+  margin-top: 30px;
+  padding: 40px 20px;
+  
+}
+
+.service-area h4 {
+  margin-top: 13px;
+  font-size: 40px;
+  color: #e67e22;
+  font-weight: bold;
+}
+
+/* Grid Setup */
+.service-img-wraping {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr); /* 4 cards per row */
+  gap: 20px; /* Gap between columns and rows */
+  row-gap: 50px; /* Space between rows of cards */
+  margin-top: 28px;
+  padding: 0 20px;
+}
+
+/* Cards */
+.card {
+  position: relative;
+  overflow: hidden;
+  border-radius: 10px;
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  background: #ffffff;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+}
+
+.card img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+
+.card:hover img {
+  transform: scale(1.05);
+}
+
+/* Content */
+.team-content {
+  padding: 15px 10px;
+  text-align: center;
+  background: linear-gradient(180deg, #fff 60%, #f9f9f9);
+  border-top: 1px solid #eee;
+  border-radius: 0 0 10px 10px;
+  padding-bottom: 30px;
+}
+
+.team-content h5 {
+  font-size: 1.1rem;
+  color: #2F2424;
+  margin-bottom: 8px;
+  font-weight: 600;
+}
+
+.service-description {
+  font-size: 0.95rem;
+  color: #2F4F4F;
+  margin: 8px 0 20px 0;  /* Increased margin-bottom for spacing */
+  line-height: 1.5;
+}
+
+/* Button */
+.btn {
+  margin-top: 10px;
+  text-decoration: none;
+  background-color: #ff4d6d;
+  color: #fff;
+  padding: 8px 18px;
+  border-radius: 8px;
+  font-size: 0.9rem;
+  font-weight: 600;
+  transition: background-color 0.3s;
+}
+
+.btn:hover {
+  background-color: #e03e5b;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+  .service-img-wraping {
+    grid-template-columns: repeat(2, 1fr); /* 2 columns on smaller screens */
+    row-gap: 30px;
+    padding: 0 10px;  /* Reduced padding to fit better on smaller screens */
+  }
+
+  .service-area h4 {
+    font-size: 1.2rem; /* Adjust the font size for smaller screens */
+    margin-bottom: 10px; /* Ensure some space below the heading */
+  }
+
+  .team-content h5 {
+    font-size: 1rem;
+  }
+
+  .video-container {
+    padding: 10px;
+  }
+
+  .video-container iframe {
+    height: 250px;
+  }
+}
+
+@media (max-width: 480px) {
+  .service-img-wraping {
+    grid-template-columns: 1fr; /* 1 column on very small screens */
+  }
+
+  .video-container iframe {
+    height: 200px;
+  }
+}
