@@ -3,7 +3,7 @@ import Edu from "../Assets/cards/edu.jpg";
 import Feed from "../Assets/cards/feed.jpg";
 import Celeb from "../Assets/cards/celebrate.jpg";
 import Help from "../Assets/cards/Help1.webp";
-import "./card.css";
+import "./Card.css";
 
 export default function Cards() {
   // State to track which card has been clicked
