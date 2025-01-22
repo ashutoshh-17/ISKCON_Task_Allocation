@@ -1,6 +1,7 @@
 // Login.js
 import React, { useState } from 'react';
 import './Login.css';
+import { Link } from 'react-router-dom';
 import GoogleIcon from '../Assets/google-icon.png'; // Make sure to add a Google icon image
 
 function Login() {
@@ -24,7 +25,7 @@ function Login() {
             <div className="login-form">
               <input type="text" placeholder="Email or Phone" className="input-field" />
               <input type="password" placeholder="Password" className="input-field" />
-              <button className="next-button">Next</button>
+              <button className="next-button"><Link to="/admin">Next</Link></button>
               <div className="form-footer">
                 <span className="reset-link">Reset Password</span>
               </div>
@@ -52,7 +53,9 @@ function Login() {
               <div className="divider123">- or -</div>
               <button className="google-button">
                 <img src={GoogleIcon || "/placeholder.svg"} alt="Google" className="google-icon" />
+                <Link to="/admin">
                 Log in with Google
+                </Link>
               </button>
             </div>
           </div>
